@@ -1,0 +1,153 @@
+.gallery {
+	padding-bottom: 100px;
+
+	.laptop({
+		padding-bottom: 85px;
+	});
+
+	.b-mobile({
+		padding-bottom: 70px;
+	});
+
+	&__grid {
+		display: grid;
+		grid-template-columns:
+			minmax(0px, 530px) minmax(0px, 255px) minmax(0px, 662px)
+			minmax(0px, 530px);
+		grid-auto-rows: 662px;
+		column-gap: 20px;
+
+		.laptop({
+			grid-auto-rows: 580px;
+		});
+
+		.m-laptop({
+			grid-auto-rows: 480px;
+		});
+
+		.tablet({
+			grid-template-columns: 1fr;
+			padding-right: 100px;
+			padding-left: 100px;
+			grid-auto-rows: 410px;
+		});
+
+		.mobile({
+			padding-right: 30px;
+			padding-left: 30px;
+			grid-auto-rows: 385px;
+		});
+	}
+
+	&__grid-item {
+		display: grid;
+		row-gap: 32px;
+
+		&:first-child,
+		&:last-child {
+			grid-template-rows: minmax(0px, 270px) minmax(0px, 360px);
+		}
+
+		&:nth-child(2) {
+			grid-template-rows: minmax(0px, 375px) minmax(0px, 260px);
+		}
+
+		.b-laptop({
+			row-gap: 20px;
+		});
+
+		.tablet({
+			display: none;
+		});
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__grid-item.appointment {
+		padding: 23px 25px 30px;
+		.flex-column(center, space-between);
+		.bg('gallery/5.jpg', center);
+
+		.laptop({
+			padding: 23px 15px 30px;
+		});
+
+		.tablet({
+			padding: 36px 15px 30px;
+		});
+
+		h2 {
+			color: @color-white;
+			font-size: 28px;
+			font-weight: 300;
+			line-height: 45px;
+			text-transform: uppercase;
+
+			.b-laptop({
+				font-size: 23px;
+				line-height: 38px;
+			});
+
+			.laptop({
+				font-size: 19px;
+				line-height: 34px;
+			});
+
+			.m-laptop({
+				font-size: 14px;
+    			line-height: 32px;
+			});
+
+			.tablet({
+				font-size: 26px;
+				line-height: 48px;
+				max-width: 670px;
+			});
+
+			.m-tablet({
+				font-size: 20px;
+				line-height: 42px;
+			});
+
+			.b-mobile({
+				font-size: 15px;
+				line-height: 37px;
+			});
+		}
+
+		.btn {
+			color: @color-gray;
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(6px);
+
+			.b-laptop({
+				font-size: 14px;
+			});
+
+			.laptop({
+				font-size: 13px;
+				padding: 12px 20px;
+			});
+
+			.m-laptop({
+				font-size: 11px;
+    			padding: 12px 16px;
+			});
+
+			.tablet({
+				font-size: 14px;
+			});
+
+			.m-tablet({
+				font-size: 13px;
+			});
+
+			.b-mobile({
+				font-size: 10px;
+			});
+		}
+	}
+}

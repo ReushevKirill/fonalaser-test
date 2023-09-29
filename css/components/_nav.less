@@ -1,0 +1,23 @@
+.nav {
+	&__list {
+		display: flex;
+		align-items: center;
+		column-gap: 36px;
+		margin-right: 36px;
+
+		.m-laptop({
+			column-gap: 30px;
+			margin-right: 30px;
+		});
+	}
+
+	&__link {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+
+		.m-laptop({
+			font-size: 15px;
+		});
+	}
+}

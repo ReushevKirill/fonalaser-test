@@ -1,0 +1,110 @@
+.modal {
+	&__overlay {
+		padding: 15px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		.flex-row(center, center);
+		overflow-y: auto;
+		height: 100vh;
+		width: 100%;
+		z-index: @z-modal;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+		.is-open & {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__window {
+		background: @color-white;
+		width: 500px;
+		height: 500px;
+		padding: 23px 22px;
+		max-width: 600px;
+		max-height: 660px;
+		width: 100%;
+		height: 100%;
+		align-items: stretch;
+		justify-content: flex-start;
+		flex-direction: column;
+		row-gap: 30px;
+		border-radius: 16px;
+		display: none;
+
+		.is-open & {
+			display: flex;
+		}
+	}
+
+	&__close {
+		cursor: pointer;
+		align-self: flex-end;
+		&::before {
+			content: '\2715';
+		}
+	}
+
+	&__content {
+		padding: 0 15px;
+	}
+
+	&__title {
+		font-size: 20px;
+		margin-bottom: 45px;
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: 28px;
+	}
+
+	&__form-label {
+		display: flex;
+		flex-direction: column;
+		row-gap: 6px;
+	}
+
+	&__form-label._error {
+		color: red;
+	}
+
+	&__form-input {
+		padding: 16px;
+		border-radius: 6px;
+		border: 1px solid #2f2f2f;
+		background-color: #fff;
+		box-shadow: none;
+
+		&--textarea {
+			resize: none;
+			height: 130px;
+		}
+	}
+
+	&__form-input._error {
+		border-color: red;
+
+		&::placeholder {
+			color: red;
+		}
+	}
+
+	&__form-btn {
+		display: flex;
+		justify-content: center;
+		transition: transform 0.1s ease;
+
+		button {
+			font-size: 16px;
+		}
+	}
+}

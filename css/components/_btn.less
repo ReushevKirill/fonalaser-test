@@ -1,0 +1,48 @@
+.btn {
+	padding: 18px 46px;
+	.flex-row(center, center);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	cursor: pointer;
+
+	.b-laptop({
+		font-size: 17px;
+		padding: 14px 30px;
+	});
+
+	.laptop({
+		font-size: 15px;
+	});
+
+	.m-laptop({
+		font-size: 12px;
+	});
+
+	.tablet({
+		font-size: 10px;
+		padding: 15px 20px;
+	});
+
+	.b-mobile({
+		padding: 10px 20px;
+	});
+
+	&--transparent {
+		background-color: transparent;
+		color: @color-white;
+		border-color: @color-white;
+	}
+
+	&--cashmere {
+		background-color: @color-cashmere;
+		color: @color-white;
+	}
+
+	&--white {
+		background-color: @color-white;
+		color: @color-gray;
+	}
+}

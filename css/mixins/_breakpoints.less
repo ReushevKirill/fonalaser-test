@@ -1,0 +1,64 @@
+// Мобилки
+@mobile: 450px;
+
+// Большие мобилки
+@b-mobile: 580px;
+
+// Маленькие планшеты
+@m-tablet: 690px;
+
+// Планшеты
+@tablet: 960px;
+
+// Маленькие ноутбуки
+@m-laptop: 1090px;
+
+// Ноутбуки
+@laptop: 1240px;
+
+// Большие ноутбуки
+@b-laptop: 1490px;
+
+// Медиа-запросы
+
+.mobile(@rules) {
+	@media screen and (max-width: @mobile) {
+		@rules();
+	}
+}
+
+.b-mobile(@rules) {
+	@media screen and (max-width: @b-mobile) {
+		@rules();
+	}
+}
+
+.m-tablet(@rules) {
+	@media screen and (max-width: @m-tablet) {
+		@rules();
+	}
+}
+
+.tablet(@rules) {
+	@media screen and (max-width: @tablet) {
+		@rules();
+	}
+}
+
+.m-laptop(@rules) {
+	@media screen and (max-width: @m-laptop) {
+		@rules();
+	}
+}
+
+.laptop(@rules) {
+	@media screen and (max-width: @laptop) {
+		@rules();
+	}
+}
+
+.b-laptop(@rules) {
+	@media screen and (max-width: @b-laptop) {
+		@rules();
+	}
+}
