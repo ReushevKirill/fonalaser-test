@@ -1042,10 +1042,9 @@ a {
 }
 .gallery__grid {
 	display: grid;
-	grid-template-columns: minmax(0px, 530px) minmax(0px, 255px) minmax(
-			0px,
-			662px
-		) minmax(0px, 530px);
+	grid-template-columns:
+		minmax(0px, 530px) minmax(0px, 255px) minmax(0px, 662px)
+		minmax(0px, 530px);
 	grid-auto-rows: 662px;
 	column-gap: 20px;
 }
@@ -2045,7 +2044,7 @@ a {
 	}
 }
 .prices__list-title {
-	max-width: 680px;
+	max-width: 683px;
 }
 @media screen and (max-width: 1490px) {
 	.prices__list-title {
